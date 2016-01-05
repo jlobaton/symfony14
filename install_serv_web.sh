@@ -7,7 +7,7 @@ apt-get update -y
 # Install Apache
 apt-get install apache2 -y
 #Install PHP
-sudo apt-get -y install php5 libapache2-mod-php5 php5-curl php5-gd php5-mcrypt php5-mysql php-apc -y
+sudo apt-get -y install php5 libapache2-mod-php5 php5-curl php5-gd php5-mcrypt php5-mysql php-apc php5-xsl -y
 # Install MySQL
 echo "mysql-server mysql-server/root_password password root" | sudo debconf-set-selections
 echo "mysql-server mysql-server/root_password_again password root" | sudo debconf-set-selections
