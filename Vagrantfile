@@ -20,11 +20,11 @@ php_timezone_cli = "America/New_York"
 
 web_apps = {
   "project1" => {
-    "host_project_folder"  => "/home/schuma/Desarrollo/ClubAmerica",
-    "guest_project_folder" => "/home/vagrant/ClubAmerica",
-    "guest_docroot"        => "/home/vagrant/ClubAmerica/web",
+    "host_project_folder"  => "/directorio/carpeta_de_trabajo",
+    "guest_project_folder" => "/directorio/carpeta_de_trabajo",
+    "guest_docroot"        => "/directorio/carpeta_de_trabajo/web",
     "server_name"          => "localhost",
-    "server_aliases"       => ["*.localhost"],
+    "server_aliases"       => ["*.carpeta_de_trabajo"],
     "php_timezone"         => "America/New_York"
   }
 }
