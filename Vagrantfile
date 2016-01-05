@@ -38,29 +38,20 @@ host_port             = 8080
 xdebug_remote_enabled = 1
 xdebug_remote_host    = "33.33.33.1"
 xdebug_remote_port    = 9000
+host_port_mysql       = 33060
 
 # -----------------------------------------------------------------------------
 
 
 Vagrant::Config.run do |config|
-  # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "precise32"
   config.vm.box_url = "http://files.vagrantup.com/precise32.box"
-
-  # Assign this VM to a bridged network, allowing you to connect directly to a
-  # network using the host's network device. This makes the VM appear as another
-  # physical device on your network.
   config.vm.network :hostonly, guest_ip
   config.vm.network :bridged
-
-  # Forward a port from the guest to the host, which allows for outside
-  # computers to access the VM, whereas host only networking does not.
   config.vm.forward_port 80, host_port
+   #config.vm.forward_port 3306, host_port_mysq
+  config.vm.network :forwarded_port, guest: 3306, host: host_port_mysql
 
-  # Share an additional folder to the guest VM. The first argument is
-  # an identifier, the second is the path on the guest to mount the
-  # folder, and the third is the path on the host to the actual folder.
-  # config.vm.share_folder("web-app", "/home/vagrant/web-app", "../", :owner => "vagrant")
   web_apps.each do |id, web_app|
     config.vm.share_folder(id, web_app["guest_project_folder"], web_app["host_project_folder"], :owner => "vagrant")
   end
