@@ -22,8 +22,8 @@ sudo apt-get install phpmyadmin -y
 sudo apt-get install curl git -y
 
 #configuracion del apache
-#echo "ServerName localhost" | sudo tee /etc/apache2/sites-available/fqdn.conf
-#sudo ln -s /etc/apache2/sites-available/fqdn.conf /etc/apache2/sites-enabled/fqdn.conf
+echo "ServerName localhost" | sudo tee /etc/apache2/sites-available/symfony.conf
+sudo ln -s /etc/apache2/sites-available/symfony.conf /etc/apache2/sites-enabled/symfony.conf
 
 # Restart Apache service
 service apache2 restart
