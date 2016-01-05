@@ -20,9 +20,9 @@ php_timezone_cli = "America/New_York"
 
 web_apps = {
   "project1" => {
-    "host_project_folder"  => "/directorio/carpeta_de_trabajo",
-    "guest_project_folder" => "/home/vagrant/directorio_de_trabajo"",
-    "guest_docroot"        => "/home/vagrant/directorio_de_trabajo/web",
+    "host_project_folder"  => "/home/schuma/Desarrollo/ClubAmerica",
+    "guest_project_folder" => "/home/vagrant/ClubAmerica",
+    "guest_docroot"        => "/home/vagrant/ClubAmerica/web",
     "server_name"          => "localhost",
     "server_aliases"       => ["*.localhost"],
     "php_timezone"         => "America/New_York"
