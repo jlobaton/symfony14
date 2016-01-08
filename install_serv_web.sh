@@ -1,5 +1,11 @@
 #!/bin/bash
+##########
+### Created by Jesus Maria aka SchumaVE <jesuslobaton@gmail.com>
+##########
+
+#Configuracion Generales
 DBPASSWD=1234
+
 # Update server
 ###apt-get update -y
 #apt-get upgrade -y 
