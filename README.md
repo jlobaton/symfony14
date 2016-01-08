@@ -17,26 +17,35 @@ Configuración Inicial para ejecutar Symfony ver 1.4 usando  ```vagrant``` y la 
 ## Para Iniciar (Get started)
 
 ```
-git clone git://github.com/jlobaton/symfony14.git
-cd symfony14
+  $ git clone git://github.com/jlobaton/symfony14.git 
+  $ cd symfony14
 ```
 .. editar el archivo ```Vagrantfile``` y personalizar el directorio de trabajo en la sección ```host_project* y guest_docroot```
 
 ```
-"host_project_folder"  => "directorio/carpeta_de_trabajo",
-"guest_project_folder" => "/home/vagrant/carpeta_de_trabajo",
-"guest_docroot"        => "/home/vagrant/carpeta_de_trabajo/web",
+  "host_project_folder"  => "directorio/carpeta_de_trabajo",
+  "guest_project_folder" => "/home/vagrant/carpeta_de_trabajo",
+  "guest_docroot"        => "/home/vagrant/carpeta_de_trabajo/web",
 ```
 
 ...y una vez iniciado el vagrant, se empezará a instalar la maquina virtual [```precise32.box``` ](http://files.vagrantup.com/precise32.box).y todas las aplicaciones , y luego para tener acceso a la maquina inicial instalada, ejecutamos
 
 ```
-vagrant up
-```
-... en el navegador colocar
-
-```
-http://33.33.333.1:8080
+  $ vagrant up
 ```
 
-## Gracias (Thanks) 
+## Acceso al Servidor Apache (Access to Apache server) :
+```
+  URL: http://33.33.333.1:8080
+```
+
+## MySQL and PhpMyAdmin:
+```
+  Username: root
+  Password: 1234
+  PhpMyAdmin URL: http://33.33.333.1:8080/phpmyadmin
+```
+
+## Autor (Author)
+
+  Jesus Maria Lobaton Escobar < jesuslobaton@gmail.com >
